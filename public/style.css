@@ -215,8 +215,27 @@ footer {
   margin-right: 30px;
 }
 
-@media screen and (max-width: 950px) {
+@media (max-width: 1400px) {
   .item {
-    width: 50%;
+    width: 48%;
+  }
+
+  .item:not(:nth-child(2n+2)) {
+    margin-right: 2%;
+  }
+  
+  .item:nth-child(n+3) {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .item {
+    width: 95%;
+    margin-right: 0;
+  }
+
+  .item:nth-child(n+2) {
+    margin-top: 30px;
   }
 }
