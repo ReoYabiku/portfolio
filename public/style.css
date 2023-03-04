@@ -44,7 +44,7 @@ header p {
 header ul {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 70%;
 }
 
 header ul li {
@@ -76,7 +76,7 @@ header ul li:last-child {
   background-color: var(--color-conversion);
   border-radius: 20px;
   padding: 8px 15px;
-  margin: 5px 10px;
+  margin: 5px 15px;
   color: var(--color-white);
   display: flex;
   justify-content: space-between;
@@ -92,6 +92,9 @@ header ul li:last-child {
   transform: rotate(45deg);
 }
 
+#hamburger-menu {
+  display: none;
+}
 
 #top-view {
   margin-top: 80px;
@@ -215,7 +218,59 @@ footer {
   margin-right: 30px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
+  header ul {
+    display: none;
+  }
+
+  #hamburger-menu {
+    margin: auto 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: var(--color-conversion);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  #hamburger-menu span,
+  #hamburger-menu span::before,
+  #hamburger-menu span::after {
+    content: '';
+    height: 4px;
+    width: 40px;
+    display: block;
+    border-radius: 2px;
+    background-color: var(--color-white);
+    position: absolute;
+  }
+
+  #hamburger-menu span::before {
+    bottom: 15px;
+  }
+
+  #hamburger-menu span::after {
+    top: 15px;
+  }
+
+  #hidden:checked ~ #hamburger-menu span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #hidden:checked ~ #hamburger-menu span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  #hidden:checked ~ #hamburger-menu span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
   .item {
     width: 48%;
   }
