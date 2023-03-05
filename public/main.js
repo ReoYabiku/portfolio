@@ -3,5 +3,3 @@ window.addEventListener('load', function() {
     top: -40,
   });
 });
-
-console.log('JS is activated!')
