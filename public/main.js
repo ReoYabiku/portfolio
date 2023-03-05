@@ -17,24 +17,24 @@ window.onload = function() {
   let hidden = document.getElementById('hidden');
 
   menu_about.addEventListener('click', function() {
-    hidden.clickek = false;
+    hidden.clicked = false;
     console.log('clicked!');
     location.reload;
   })
   menu_philosophy.addEventListener('click', function() {
-    hidden.clickek = false;
+    hidden.clicked = false;
     location.reload;
   })
   menu_biography.addEventListener('click', function() {
-    hidden.clickek = false;
+    hidden.clicked = false;
     location.reload;
   })
   menu_achievement.addEventListener('click', function() {
-    hidden.clickek = false;
+    hidden.clicked = false;
     location.reload;
   })
   menu_contact.addEventListener('click', function() {
-    hidden.clickek = false;
+    hidden.clicked = false;
     location.reload;
   })
 }
