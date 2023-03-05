@@ -328,15 +328,9 @@ footer {
     height: 1000px;
   }
 
-  @keyframes menu {
-    from {
-      margin-left: 100%;
-      width: 0;
-    }
-
-    to {
-      width: 80%;
-    }
+  #base-card {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .item {
