@@ -5,36 +5,39 @@ window.addEventListener('load', function() {
 });
 
 window.onload = function() {
-  let menu_about = document.getElementById('menu-about');
+  const menu_about = document.getElementById('menu-about');
   if(menu_about != null) {
     console.log("not null");
   }
-  let menu_philosophy = document.getElementById('menu-philosophy');
-  let menu_biography = document.getElementById('menu-biography');
-  let menu_achievement = document.getElementById('menu-achievement');
-  let menu_contact = document.getElementById('menu-contact');
+  const menu_philosophy = document.getElementById('menu-philosophy');
+  const menu_biography = document.getElementById('menu-biography');
+  const menu_achievement = document.getElementById('menu-achievement');
+  const menu_contact = document.getElementById('menu-contact');
 
-  let hidden = document.getElementById('hidden');
+  const menu = document.getElementById('menu');
+  let shadow = document.getElementById('shadow');
+
+  console.log(menu.style.display);
 
   menu_about.addEventListener('click', function() {
-    hidden.clicked = false;
+    menu.style.display = 'none';
+    shadow.style.display = 'none';
     console.log('clicked!');
-    location.reload;
   })
   menu_philosophy.addEventListener('click', function() {
-    hidden.clicked = false;
-    location.reload;
+    menu.style.display = 'none';
+    shadow.style.display = 'none';
   })
   menu_biography.addEventListener('click', function() {
-    hidden.clicked = false;
-    location.reload;
+    menu.style.display = 'none';
+    shadow.style.display = 'none';
   })
   menu_achievement.addEventListener('click', function() {
-    hidden.clicked = false;
-    location.reload;
+    menu.style.display = 'none';
+    shadow.style.display = 'none';
   })
   menu_contact.addEventListener('click', function() {
-    hidden.clicked = false;
-    location.reload;
+    menu.style.display = 'none';
+    shadow.style.display = 'none';
   })
 }
