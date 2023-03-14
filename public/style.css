@@ -66,11 +66,29 @@ header ul li:last-child {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
+  position: relative;
 }
 
 .navi span {
   color: var(--color-conversion);
   font-size: 10px;
+}
+
+.navi::after {
+  position: absolute;
+  content: '';
+  width: 70%;
+  left: 15%;
+  bottom: -6px;
+  height: 2px;
+  background-color: var(--color-conversion);
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+
+.navi:hover::after {
+  transform: scale(1, 1);
 }
 
 #contact-btn {
