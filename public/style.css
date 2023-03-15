@@ -222,6 +222,13 @@ header ul li:last-child {
   margin: 0 10%;
 }
 
+.text_wrap summary {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 footer {
   height: 300px;
   background-color: var(--color-text);
