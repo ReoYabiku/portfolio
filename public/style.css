@@ -225,8 +225,8 @@ header ul li:last-child {
 .text_wrap summary {
   font-size: 18px;
   font-weight: bold;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 footer {
