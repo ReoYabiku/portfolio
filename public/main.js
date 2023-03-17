@@ -1,5 +1,8 @@
 window.onload = function() {
   const menu_about = document.getElementById('menu-about');
+  if(menu_about) {
+    console.log("is about");
+  }
   const menu_philosophy = document.getElementById('menu-philosophy');
   const menu_biography = document.getElementById('menu-biography');
   const menu_achievement = document.getElementById('menu-achievement');
@@ -10,6 +13,7 @@ window.onload = function() {
   const hidden = document.getElementById('hidden');
 
   menu_about.addEventListener('click', function() {
+    console.log("menu_about was clicked!!");
     menu.style.display = 'none';
     shadow.style.display = 'none';
     hidden.checked = false;
@@ -39,11 +43,10 @@ window.onload = function() {
     hidden.checked = false;
     location.reload();
   })
-}
 
-const details_list = document.getElementsByTagName('details');
-
-window.onload = function() {
+  
+  const details_list = document.getElementsByTagName('details');
+  
   if(window.outerWidth > 1300) {
     for(const details of details_list) {
       details.open = true;
