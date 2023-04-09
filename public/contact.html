@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sanitize.css">
+    <link rel="stylesheet" href="contact-form.css">
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><p>屋比久れおのポートフォリオ</p></a>
+      <ul>
+        <li><a href="./index.html#about" class="navi"><span>About</span>私について</a></li>
+        <li><a href="./index.html#philosophy" class="navi"><span>Philosophy</span>理念</a></li>
+        <li><a href="./index.html#biography" class="navi"><span>Biography</span>略歴</a></li>
+        <li><a href="./index.html#achievement" class="navi"><span>Achievement</span>実績</a></li>
+        <li><a href="./index.html#contact" id="contact-btn">お問い合わせ</a></li>
+      </ul>
+      <input type="checkbox" id="hidden" hidden>
+      <label for="hidden" id="hamburger-menu">
+        <span></span>
+      </label>
+      <label for="hidden" id="shadow"></label>
+      <label for="hidden" id="menu">
+        <div id="menu-content">
+          <h1>メニュー</h1>
+          <a href="#about" id="menu-about"><h2>私について</h2></a>
+          <a href="#philosophy" id="menu-philosophy"><h2>理念</h2></a>
+          <a href="#biography" id="menu-biography"><h2>略歴</h2></a>
+          <a href="#achievement" id="menu-achievement"><h2>実績</h2></a>
+          <a href="#contact" id="menu-contact"><h2>お問い合わせ</h2></a>
+        </div>
+      </label>
+    </header>
+    <main>
+      <div id="base-card">
+        <div class="content">
+          <h2 id="contac">お問い合わせ<svg></svg></h2>
+          <form action="">
+            <label>
+              <span class="form-title">お名前<span class="required">必須</span></span>
+              <input type="text" name="name" class="form-input" required>
+            </label>
+            <label>
+              <span class="form-title">メールアドレス<span class="required">必須</span></span>
+              <input type="email" name="email" class="form-input" required>
+            </label>
+            <label>
+              <span class="form-title">電話番号</span>
+              <input type="tel" name="tel" class="form-input">
+            </label>
+            <label>
+              <span class="form-title-textarea">お問い合わせ内容<span class="required">必須</span></span>
+              <textarea type="textarea" name="contact" required></textarea>
+            </label>
+            <input type="button" value="送信" class="submit-btn">
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="footer-contact">
+          <h2>お問い合わせ</h2>
+          <div id="sns">
+            <p>twitter: <a href="https://twitter.com/percentaction7">@percentaction7</a></p>
+            <p>gmail: alcremikyu.z@gmail.com</p>
+          </div>
+        </div>
+        <hr width="100%">
+        <h2>屋比久れお</h2>
+      </div>
+      <div id="copyright">
+        <p>Copyright ©︎ 2023 Reo Yabiku</p>
+      </div>
+    </footer>
+  </body>
+</html>

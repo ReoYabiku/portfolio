@@ -130,8 +130,11 @@ header ul li:last-child {
   left: 0;
 }
 
+main {
+  padding-top: 60px;
+}
+
 #top-view {
-  margin-top:60px;
   height: 400px;
   position: relative;
   text-align: center;
@@ -246,7 +249,7 @@ footer {
   white-space: nowrap;
 }
 
-#contact {
+#footer-contact {
   padding-top: 30px;
   display: flex;
 }
