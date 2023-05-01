@@ -1,8 +1,5 @@
 window.onload = function() {
   const menu_about = document.getElementById('menu-about');
-  if(menu_about) {
-    console.log("is about");
-  }
   const menu_philosophy = document.getElementById('menu-philosophy');
   const menu_biography = document.getElementById('menu-biography');
   const menu_achievement = document.getElementById('menu-achievement');
