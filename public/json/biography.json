@@ -1,0 +1,37 @@
+[
+  {
+    "src": "./src/todai.jpeg",
+    "alt": "安田講堂",
+    "summary": "東京大学入学",
+    "title": "2020年4月~現在",
+    "description": "理科一類に入学。志望者内トップの成績でシステム創成学科SDMコースへ進学。\n2024年卒業予定。"
+  },
+  {
+    "src": "./src/Ruby_on_Rails.svg",
+    "alt": "Ruby on Railsのロゴ",
+    "summary": "株式会社Fulmo インターン",
+    "title": "2022年4月~2023年1月",
+    "description": "Ruby on Railsを用いたECサイトのリファクタリングや機能実装、テストの実装を経験。"
+  },
+  {
+    "src": "./src/Ruby_on_Rails.svg",
+    "alt": "Ruby on Railsのロゴ",
+    "summary": "合同会社tilda インターン",
+    "title": "2022年5月~現在",
+    "description": "Ruby on Railsを用いた不動産投資プラットフォームの機能実装、テストの実装を経験。スクラムを組んで開発。"
+  },
+  {
+    "src": "./src/retty.JPG",
+    "alt": "Rettyインターン記念写真",
+    "summary": "株式会社Retty インターン",
+    "title": "2022年8月~2022年9月",
+    "description": "GoやCallNoteを用いて、予約専用電話番号の発行APIの作成を、Clean Architetureに留意して作成。"
+  },
+  {
+    "src": "./src/golang.png",
+    "alt": "golangのロゴ",
+    "summary": "合同会社DMM インターン",
+    "title": "2023年2月~2023年3月",
+    "description": "oやGCPを利用した新機能に関わるエンドポイントの作成やテストの実装、terraformを用いたGCPインフラのIaC化を経験。"
+  }
+]

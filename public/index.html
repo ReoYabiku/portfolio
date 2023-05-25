@@ -56,101 +56,25 @@
   
         <div class="content">
           <h2 id="biography">略歴<svg></svg></h2>
-          <div class="wrap">
-            <div class="item">
-              <img src="./src/todai.jpeg" alt="安田講堂">
-              <details class="text_wrap">
-                <summary>東京大学入学</summary>
-                <p>2020年4月~現在</p>
-                <p>理科一類に入学。志望者内トップの成績でシステム創成学科SDMコースへ進学。<br>2024年卒業予定。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/Ruby_on_Rails.svg" alt="Ruby on Railsのロゴ">
-              <details class="text_wrap">
-                <summary>株式会社Fulmo インターン</summary>
-                <p>2022年4月~2023年1月</p>
-                <p>Ruby on Railsを用いたECサイトのリファクタリングや機能実装、テストの実装を経験。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/Ruby_on_Rails.svg" alt="Ruby on Railsのロゴ">
-              <details class="text_wrap">
-                <summary>合同会社tilda インターン</summary>
-                <p>2022年5月~現在</p>
-                <p>Ruby on Railsを用いた不動産投資プラットフォームの機能実装、テストの実装を経験。スクラムを組んで開発。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/retty.JPG" alt="Rettyインターン記念写真">
-              <details class="text_wrap">
-                <summary>株式会社Retty インターン</summary>
-                <p>2022年8月~2022年9月</p>
-                <p>GoやCallNoteを用いて、予約専用電話番号の発行APIの作成を、Clean Architetureに留意して作成。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/golang.png" alt="golangのロゴ">
-              <details class="text_wrap">
-                <summary>合同会社DMM インターン</summary>
-                <p>2023年2月~2023年3月</p>
-                <p>GoやGCPを利用した新機能に関わるエンドポイントの作成やテストの実装、terraformを用いたGCPインフラのIaC化を経験。</p>
-              </details>
-            </div>
-          </div>
+          <div class="wrap" id="biography-template-wrapper"></div>
         </div>
   
         <div class="content">
           <h2 id="achievement">実績<svg></svg></h2>
-          <div class="wrap">
-            <div class="item">
-              <img src="./src/sklearn.png" alt="sklearnのロゴ">
-              <details class="text_wrap">
-                <summary>HaitLab6期生</summary>
-                <p>2021年8月~2021年10月</p>
-                <p>scikit-learnを用いた機械学習を経験。<br>SIGNATEのコンペに出場。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/lt.png" alt="LT会後の集合写真">
-              <details class="text_wrap">
-                <summary>学生対象のLT会を主催</summary>
-                <p>2022年9月</p>
-                <p>10人規模のLT会の企画・集客・進行を実施。自身も登壇し、同世代のエンジニアと交流する場を提供。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/data-comp.JPG" alt="データサイエンスコンペ準優勝の賞状">
-              <details class="text_wrap">
-                <summary>東京大学データサイエンスコンペ優秀賞</summary>
-                <p>2022年9月</p>
-                <p>若者の飲酒機会創造をテーマに、アンケートのデータをもとにした販促方法を提案。</p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/mcm.png" alt="コード生成サイトのトップページ">
-              <details class="text_wrap">
-                <summary>JPHacks参加</summary>
-                <p>2022年10月</p>
-                <p>ReactとFlaskを用いた構成で機械学習用のコード生成サイトを作成。</p>
-                <p>
-                  <a href="https://github.com/ReoYabiku/JPHACKS2022_b2022">
-                    リポジトリ
-                  </a>←←←←
-                </p>
-              </details>
-            </div>
-            <div class="item">
-              <img src="./src/portfolio.png" alt="ポートフォリオサイトのトップページ">
-              <details class="text_wrap">
-                <summary>ポートフォリオ作成</summary>
-                <p>2023年3月</p>
-                <p>HTML/CSSを主としたポートフォリオを作成。管理者ページを作成し、React+Typescriptでの構成に移行予定。</p>
-              </details>
-            </div>
-          </div>
+          <div class="wrap" id="achievement-template-wrapper"></div>
         </div>
       </div>
+      
+      <template id="template-card">
+        <div class="item">
+          <img src="" alt="">
+          <details class="text_wrap">
+            <summary></summary>
+            <p></p>
+            <p></p>
+          </details>
+        </div>
+      </template>
     </main>
     <footer>
       <div id="footer-content">

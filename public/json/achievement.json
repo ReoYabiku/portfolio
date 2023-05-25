@@ -1,0 +1,44 @@
+[
+  {
+    "src": "./src/sklearn.png",
+    "alt": "sklearnのロゴ",
+    "summary": "HaitLab6期生",
+    "title": "2021年8月~2021年10月",
+    "description": "scikit-learnを用いた機械学習を経験。\nSIGNATEのコンペに出場。"
+  },
+  {
+    "src": "./src/lt.png",
+    "alt": "LT会後の集合写真",
+    "summary": "学生対象のLT会を主催",
+    "title": "2022年9月",
+    "description": "10人規模のLT会の企画・集客・進行を実施。自身も登壇し、同世代のエンジニアと交流する場を提供。"
+  },
+  {
+    "src": "./src/data-comp.JPG",
+    "alt": "データサイエンスコンペ準優勝の賞状",
+    "summary": "東京大学データサイエンスコンペ優秀賞",
+    "title": "2022年9月",
+    "description": "若者の飲酒機会創造をテーマに、アンケートのデータをもとにした販促方法を提案。"
+  },
+  {
+    "src": "./src/mcm.png",
+    "alt": "コード生成サイトのトップページ",
+    "summary": "JPHacks参加",
+    "title": "2022年10月",
+    "description": "ReactとFlaskを用いた構成で機械学習用のコード生成サイトを作成。"
+  },
+  {
+    "src": "./src/portfolio.png",
+    "alt": "ポートフォリオサイトのトップページ",
+    "summary": "ポートフォリオ作成",
+    "title": "2023年3月~",
+    "description": "HTML/CSSを主としたポートフォリオを作成。管理者ページを作成し、React+Typescriptでの構成に移行予定。"
+  },
+  {
+    "src": "./src/html_event.jpeg",
+    "alt": "Web制作イベントの様子",
+    "summary": "Web制作イベントの実施",
+    "title": "2023年5月~",
+    "description": "プログラミング未経験者を対象に、HTML/CSSを用いたWebサイト制作を教えるイベントを定期開催中。\n参加者は自身のポートフォリオサイトを作成中。"
+  }
+]
