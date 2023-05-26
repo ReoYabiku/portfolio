@@ -64,3 +64,23 @@ label:not(:last-child) {
   margin-left: auto;
   margin-top: 40px;
 }
+
+@media (max-width: 900px) {
+  label {
+    display: block;
+  }
+
+  form {
+    padding: 0;
+    width: 100%;
+  }
+
+  .form-title, .form-title-textarea {
+    width: 100%;
+    padding: 0 0 5px;
+  }
+
+  .form-input, textarea {
+    width: 100%;
+  }
+}
