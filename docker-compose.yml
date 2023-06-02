@@ -1,0 +1,36 @@
+version: '3.9'
+services:
+  proxy:
+    image: gcr.io/cloudsql-docker/gce-proxy:latest
+    volumes: 
+      - ~/google_application_credentials:/config
+    ports:
+      - "3306:3306"
+    restart: always
+    command: /cloud_sql_proxy -instances=portfolio-fab99:us-central1:portfolio-db=tcp:0.0.0.0:3306 -credential_file=/config/credentials.json
+    networks:
+      - proxy-network
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_HOST: proxy
+      DB_PORT: $DB_PORT
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DB_NAME: $DB_NAME
+    ports:
+      - 8080:8080
+    networks:
+      - proxy-network
+    depends_on:
+      - proxy
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+    command: air
+networks:
+  proxy-network:
+    driver: bridge
