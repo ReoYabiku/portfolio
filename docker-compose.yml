@@ -13,7 +13,7 @@ services:
   app:
     build: 
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     environment:
       DB_HOST: proxy
       DB_PORT: $DB_PORT
