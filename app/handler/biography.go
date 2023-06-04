@@ -2,8 +2,8 @@ package handler
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
-	"os"
 	"portfolio/app/repository"
 )
 
@@ -24,13 +24,6 @@ func NewBiography(mysql repository.Mysql) Biography {
 }
 
 func (bh *biography) GetAll(w http.ResponseWriter, r *http.Request) {
-	allowedDomain := os.Getenv("ALLOWED_DOMAIN")
-
-	w.Header().Set("Access-Control-Allow-Origin", allowedDomain)
-	w.Header().Set("Access-Control-Allow-Credentials", "true")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, X-Requested-With, Origin, X-Csrftoken, Accept, Cookie")
-	w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT")
-
 	if r.Method != http.MethodGet {
 		w.WriteHeader(http.StatusMethodNotAllowed)
 		return
@@ -39,6 +32,7 @@ func (bh *biography) GetAll(w http.ResponseWriter, r *http.Request) {
 	bios, err := bh.mysql.GetBiobraphies()
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
+		fmt.Println(err)
 		return
 	}
 

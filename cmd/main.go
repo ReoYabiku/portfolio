@@ -8,6 +8,7 @@ import (
 	"os"
 	"portfolio/app/handler"
 	"portfolio/app/infra"
+	"portfolio/app/middleware"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -34,8 +35,8 @@ func main() {
 	bh := handler.NewBiography(mysql)
 	ah := handler.NewAchievement(mysql)
 
-	http.HandleFunc("/biographies", bh.GetAll)
-	http.HandleFunc("/achievements", ah.GetAll)
+	http.HandleFunc("/biographies", middleware.CORS(bh.GetAll))
+	http.HandleFunc("/achievements", middleware.CORS(ah.GetAll))
 
 	fmt.Println("server is running...")
 	port := os.Getenv("PORT")
