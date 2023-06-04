@@ -3,27 +3,30 @@ package handler
 import (
 	"encoding/json"
 	"net/http"
+	"os"
 	"portfolio/app/repository"
 )
 
-type biographyHandler struct {
+type biography struct {
 	mysql repository.Mysql
 }
 
-type BiographyHandler interface {
+type Biography interface {
 	GetAll(http.ResponseWriter, *http.Request)
 }
 
-var _ BiographyHandler = &biographyHandler{}
+var _ Biography = &biography{}
 
-func NewBiographyHandler(mysql repository.Mysql) BiographyHandler {
-	return &biographyHandler{
+func NewBiography(mysql repository.Mysql) Biography {
+	return &biography{
 		mysql: mysql,
 	}
 }
 
-func (bh *biographyHandler) GetAll(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Access-Control-Allow-Origin", "http://localhost:3000")
+func (bh *biography) GetAll(w http.ResponseWriter, r *http.Request) {
+	allowedDomain := os.Getenv("ALLOWED_DOMAIN")
+
+	w.Header().Set("Access-Control-Allow-Origin", allowedDomain)
 	w.Header().Set("Access-Control-Allow-Credentials", "true")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type, X-Requested-With, Origin, X-Csrftoken, Accept, Cookie")
 	w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE, PUT")

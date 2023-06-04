@@ -43,5 +43,25 @@ func (r *mysql) GetBiobraphies() ([]entity.Biography, error) {
 }
 
 func (r *mysql) GetAchievements() ([]entity.Achievement, error) {
-	return nil, nil
+	rows, err := r.db.Query("SELECT * FROM achievements")
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	achs := []entity.Achievement{}
+
+	for rows.Next() {
+		a := &entity.Achievement{}
+		if err = rows.Scan(&a.ID, &a.Src, &a.Alt, &a.Summary, &a.Title, &a.Description); err != nil {
+			return nil, err
+		}
+		achs = append(achs, *a)
+	}
+
+	if err = rows.Err(); err != nil {
+		return nil, err
+	}
+
+	return achs, err
 }

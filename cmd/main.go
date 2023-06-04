@@ -31,9 +31,11 @@ func main() {
 
 	mysql := infra.NewMysql(db)
 
-	bh := handler.NewBiographyHandler(mysql)
+	bh := handler.NewBiography(mysql)
+	ah := handler.NewAchievement(mysql)
 
 	http.HandleFunc("/biographies", bh.GetAll)
+	http.HandleFunc("/achievements", ah.GetAll)
 
 	fmt.Println("server is running...")
 	port := os.Getenv("PORT")
