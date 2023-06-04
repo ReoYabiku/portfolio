@@ -30,7 +30,7 @@ func main() {
 	defer db.Close()
 
 	mysql := infra.NewMysql(db)
-	
+
 	bh := handler.NewBiographyHandler(mysql)
 
 	http.HandleFunc("/biographies", bh.GetAll)
