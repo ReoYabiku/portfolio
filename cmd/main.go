@@ -9,22 +9,26 @@ import (
 	"portfolio/app/handler"
 	"portfolio/app/infra"
 	"portfolio/app/middleware"
-	"time"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 )
 
 func main() {
-	user := os.Getenv("DB_USER")
-	password := os.Getenv("DB_PASSWORD")
-	host := os.Getenv("DB_HOST")
-	db_port := os.Getenv("DB_PORT")
-	database := os.Getenv("DB_NAME")
+	// settings for mysql
 
-	time.Sleep(2 * time.Second)
+	// user := os.Getenv("DB_USER")
+	// password := os.Getenv("DB_PASSWORD")
+	// host := os.Getenv("DB_HOST")
+	// db_port := os.Getenv("DB_PORT")
+	// database := os.Getenv("DB_NAME")
 
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", user, password, host, db_port, database)
-	db, err := sql.Open("mysql", dsn)
+	// time.Sleep(2 * time.Second)
+
+	// dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", user, password, host, db_port, database)
+	// db, err := sql.Open("mysql", dsn)
+
+	// settings for postgresql
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	if err != nil {
 		log.Fatal(err)
 	}
