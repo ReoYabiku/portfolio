@@ -3,7 +3,7 @@ const shadow = document.getElementById('shadow');
 const hidden = document.getElementById('hidden');
 
 function main() {
-  const domain = "https://portfolio-go.yabi-works.com";
+  const domain = "https://portfolio-go.herokuapp.com/";
 
   optimizeHamburgerMenu();
   fetchTemplateCardContents(domain+"/biographies", '#biography-template-wrapper');
